@@ -1,12 +1,13 @@
 from abc import ABC
 from abc import abstractmethod
+from typing import Generic
 from typing import List
 from typing import TypeVar
 
 T = TypeVar('T')
 
 
-class Dominio(ABC):
+class Dominio(ABC, Generic[T]):
     """
     Representa el objeto de dominio que conoce los detalles de implementación y modelamiento
     de algún problema específico para ser resuelto con algoritmos probabilísticos.
